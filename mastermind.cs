@@ -9,7 +9,7 @@ namespace Mastermind {
     int[] userArray   = new int[4];
     string userInput;
     public void GenerateAnswer ()
-    {
+    {      
       Random rnd = new Random();
       for (int i = 0; i < 4; i++)
       {
@@ -36,7 +36,7 @@ namespace Mastermind {
         }
       }
     }
-    // Converts the user input string into and intiger array and checks for bad input
+    // Converts the user input string into an intiger array and checks for bad input
     void ParseInput ()
     {
       while(true)
@@ -75,8 +75,8 @@ namespace Mastermind {
       }
       for (int i=0; i<6; i++)
       {
-        if (countUsr[i] <= countAns[i] && countAns[i] > 0){
-          for (int j=0;j<countUsr[i];j++)
+        if (countAns[i] > 0 && countUsr[i] > 0){
+          for (int j=0;j<countAns[i];j++)
           {
             response += "-";
           }
